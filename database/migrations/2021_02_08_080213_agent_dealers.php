@@ -13,7 +13,12 @@ class AgentDealers extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('agent_dealers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('agent_id');
+            $table->integer('dealer_id');
+            $table->timestamps();
+        });
     }
 
     /**

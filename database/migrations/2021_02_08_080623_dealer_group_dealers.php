@@ -13,7 +13,12 @@ class DealerGroupDealers extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('dealer_group_dealers', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('dealer_group_id');
+            $table->integer('dealer_id');
+            $table->timestamps();
+        });
     }
 
     /**

@@ -15,6 +15,11 @@ class CreateDealerGroupsTable extends Migration
     {
         Schema::create('dealer_groups', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            $table->string("address");
+            $table->string("city");
+            $table->string("state");
+            $table->string("status");
             $table->timestamps();
         });
     }
